@@ -11,13 +11,15 @@ export class SubscriptionFormComponent implements OnInit {
 
   constructor(public service: SubscriptionDetailService ) { }
 
+  
+
   ngOnInit(): void {
   }
   
 
 
   onSubmit(form:NgForm){
-    this.service.postSubscriptionForm().subscribe(
+    this.service.postSubscriptionForm("subscriptions").subscribe(
       (res) => {
         console.log("Submitted successfully to database");
       },
@@ -25,6 +27,9 @@ export class SubscriptionFormComponent implements OnInit {
         console.log("Error");
       }
     )
+    
+
+
   }
 
 }

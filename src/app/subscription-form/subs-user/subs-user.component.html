@@ -1,9 +1,66 @@
-<p>subs-user works!</p>
 
 
-<p>User ID {{subsUser.id}}</p>
-<p>User  {{subsUser.firstName}}</p>
-<p>User  {{subsUser.lastName}}</p>
-<p>User  {{subsUser.email}}</p>
-<p>User  {{subsUser.company}}</p>
+<img class="imgBackground" src="assets/Images/BackgroundSubs4.jpg">
 
+
+<div class="container">
+    <form class="form-group centered" #form="ngForm" (submit)="login()">
+        
+  
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6 border">
+        <div class="row">
+          <div class="col-lg-12 text-x-larger">
+            Sign In
+            </div>
+          <div class="col-lg-12 text-larger">
+            Fill out your information below to be Signed In for our informative Subscription
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>First Name:</label>
+            <input type="text" #name="ngModel" name="firstName" class="form-control" placeholder="Enter First Name" [(ngModel)]="service.formData.FirstName">
+          </div>
+          
+        
+        
+            <div class="col-lg-6">
+              <label>Last Name:</label>
+              <input type="text" #name="ngModel" name="lastName" class="form-control" placeholder="Enter Last Name" [(ngModel)]="service.formData.LastName">
+            </div>
+            
+        </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <label>Email:</label>
+              <input type="text" #name="ngModel" name="emailAddress" class="form-control" placeholder="Enter Email Address" [(ngModel)]="service.formData.Email">
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <label>Password</label>
+              <input type="text" name="password" class="form-control" placeholder="Enter password">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-lg-6">
+              <label>Forgot Password?</label>
+            </div>
+            <div class="col-lg-6">
+                <button type="submit" class="btn btn-primary btnColor" style="width:100%;">Log In</button>
+              </div>
+              <br>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <label>Dont have an account? &nbsp; <a routerLink="/subscription">Sign Up</a> </label>
+            </div>
+          </div>
+          
+      </div>
+    </form>
+</div>  
